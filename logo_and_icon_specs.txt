@@ -1,0 +1,167 @@
+# Logo and Icon Specifications for Unified Media Converter
+
+## Logo Design Prompts
+
+### Primary Logo Design Prompt
+Create a modern, professional logo for "Unified Media Converter" featuring:
+1. A stylized representation combining audio waveform and video playback elements
+2. Color scheme: Professional blue (#2563EB) and gray tones with accent colors
+3. Typography: Clean, modern sans-serif font
+4. Symbolism: Unification of audio and video media processing
+5. Style: Flat design, scalable for various sizes
+6. Additional elements: Subtle technology/processing motifs
+
+### Alternative Logo Design Prompt
+Design a contemporary logo for "Unified Media Converter" that:
+1. Integrates visual metaphors for both sound waves and motion/pixels
+2. Uses a harmonious color palette of deep blues (#1E40AF) and silvers (#9CA3AF)
+3. Features bold, readable typography suitable for app interfaces
+4. Embodies concepts of media fusion, precision, and reliability
+5. Adapts well to both light and dark UI themes
+6. Includes abstract geometric elements suggesting digital transformation
+
+### Minimalist Logo Design Prompt
+Develop a minimalist logo for "Unified Media Converter" with:
+1. Abstract symbol merging sound wave and pixel grid concepts
+2. Monochromatic treatment in dark gray (#374151) for versatility
+3. Geometric sans-serif lettering for modern appeal
+4. Representation of seamless media format transitions
+5. Crisp lines and negative space utilization
+6. Optimal recognition at small sizes (16x16 pixels and up)
+
+## Icon Sizes and Specifications
+
+### Windows Application Icons
+| Size (pixels) | DPI     | Purpose                             | Required |
+|---------------|---------|-------------------------------------|----------|
+| 16x16         | 96 DPI  | Toolbar, file explorer              | Yes      |
+| 24x24         | 96 DPI  | Small UI elements                   | Yes      |
+| 32x32         | 96 DPI  | Taskbar, shortcuts                  | Yes      |
+| 48x48         | 96 DPI  | Medium application icons            | Yes      |
+| 64x64         | 96 DPI  | Larger UI elements                  | Yes      |
+| 96x96         | 96 DPI  | High-DPI displays                   | Recommended |
+| 128x128       | 96 DPI  | Modern high-resolution displays    | Recommended |
+| 256x256       | 96 DPI  | Large preview, marketing materials | Recommended |
+
+### Multi-resolution ICO File Specification
+Create a single .ico file containing all required resolutions:
+- Format: Windows ICO
+- Compression: PNG compression for 256+ colors
+- Bit depths: 32-bit with alpha channel
+- Recommended sizes: 16x16, 32x32, 48x48, 64x64, 128x128, 256x256
+
+### macOS Application Icons
+| Size (pixels) | DPI     | Purpose                    | Required |
+|---------------|---------|----------------------------|----------|
+| 16x16         | 72 DPI  | Finder, small previews     | Yes      |
+| 32x32         | 72 DPI  | Dock, file associations    | Yes      |
+| 64x64         | 72 DPI  | Medium previews            | Yes      |
+| 128x128       | 72 DPI  | Standard app icon          | Yes      |
+| 256x256       | 144 DPI | Retina displays            | Yes      |
+| 512x512       | 144 DPI | Large previews, App Store  | Yes      |
+| 1024x1024     | 144 DPI | High-resolution marketing | Recommended |
+
+### Web/Touch Icons
+| Size (pixels) | Purpose                      | Format |
+|---------------|------------------------------|--------|
+| 16x16         | Browser favicons             | PNG    |
+| 32x32         | Browser tabs, bookmarks      | PNG    |
+| 48x48         | Touch devices, app menus      | PNG    |
+| 57x57         | iPhone legacy apps           | PNG    |
+| 72x72         | iPad legacy apps             | PNG    |
+| 76x76         | iPad standard resolution     | PNG    |
+| 96x96         | Google TV, Android devices   | PNG    |
+| 114x114       | iPhone retina display        | PNG    |
+| 120x120       | iPhone/iPod Touch retina    | PNG    |
+| 144x144       | iPad retina display          | PNG    |
+| 152x152       | iPad retina iOS 7+          | PNG    |
+| 180x180       | iPhone 6 Plus retina         | PNG    |
+| 192x192       | Google Chrome Web Apps       | PNG    |
+| 256x256       | Windows 10 universal apps    | PNG    |
+| 384x384       | Android launcher icons       | PNG    |
+| 512x512       | Chrome Web Store, marketing  | PNG    |
+
+## Design Guidelines
+
+### Visual Elements
+1. **Core Symbol**: Combine waveform (audio) with pixel grid or play triangle (video)
+2. **Negative Space**: Use strategically to suggest transformation/conversion
+3. **Geometric Precision**: Clean lines reflecting digital precision
+4. **Scalability**: Maintain recognizability from 16x16 to 512x512 pixels
+5. **Contrast**: Adequate contrast for accessibility compliance
+6. **Simplicity**: Avoid overly complex details that won't translate at small sizes
+
+### Color Palette
+Primary Colors:
+- Professional Blue: #2563EB (RGB: 37, 99, 235)
+- Dark Gray: #374151 (RGB: 55, 65, 81)
+- Light Gray: #F3F4F6 (RGB: 243, 244, 246)
+
+Accent Colors:
+- Success Green: #10B981 (RGB: 16, 185, 129)
+- Warning Orange: #F59E0B (RGB: 245, 158, 11)
+- Error Red: #EF4444 (RGB: 239, 68, 68)
+
+### Typography Recommendations
+Font Family: Inter or similar modern sans-serif
+Characteristics:
+- Highly legible at small sizes
+- Professional appearance
+- Good cross-platform support
+- Clear distinction between similar characters (0/O, 1/l/I)
+
+### Accessibility Considerations
+1. **Color Contrast**: Minimum 4.5:1 ratio for normal text
+2. **Alternative Text**: Prepare descriptive text for screen readers
+3. **Focus Indicators**: Ensure visible keyboard navigation indicators
+4. **Scalable Vector**: Preserve quality when enlarged for visually impaired users
+
+## Implementation Notes
+
+### File Naming Convention
+Icons should follow this naming pattern:
+- app_icon_16x16.png
+- app_icon_32x32.png
+- app_icon_256x256.png
+- app_icon.ico (multi-resolution Windows icon)
+
+### Platform-Specific Considerations
+Windows:
+- Use .ico format for executables
+- Include all standard sizes in ICO container
+- Consider high-contrast variants for accessibility mode
+
+macOS:
+- Use .icns format for applications
+- Follow Apple's Human Interface Guidelines
+- Include mask variants for different backgrounds
+
+Web:
+- Use PNG format for broadest compatibility
+- Consider SVG for vector scalability
+- Implement favicon.ico for legacy browser support
+
+Mobile:
+- Provide appropriately sized assets for various DPI densities
+- Consider adaptive icons for Android 8.0+
+- Include notification icons where applicable
+
+## Branding Consistency
+
+Ensure all visual elements maintain consistency with:
+1. Application's professional positioning
+2. Technical audience expectations
+3. Cross-platform UI/UX principles
+4. Industry-standard media processing terminology
+5. Clear value proposition of format conversion capabilities
+6. Emphasis on precision and reliability in processing
+
+## Testing Requirements
+
+Before finalizing designs, verify:
+1. Visibility across different background colors
+2. Recognition at smallest specified size (16x16)
+3. Clarity when scaled programmatically
+4. Compatibility with standard UI frameworks
+5. Proper rendering in target environments (desktop, web, mobile)
+6. Compliance with platform-specific design guidelines

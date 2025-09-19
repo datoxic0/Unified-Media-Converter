@@ -1,0 +1,48 @@
+# Unified Media Converter - Python Requirements
+
+# Core Requirements (Essential)
+# These are required for basic functionality
+tkinter  # Usually included with Python installations
+shutil   # Standard library
+subprocess  # Standard library
+json     # Standard library
+threading  # Standard library
+queue    # Standard library
+wave     # Standard library
+pathlib  # Standard library
+dataclasses  # Standard library
+
+# Essential External Dependencies
+# These must be installed separately
+ffmpeg-python>=0.2.0  # For media processing (requires system-wide FFmpeg installation)
+# Note: FFmpeg must be installed separately and accessible in system PATH
+
+# Optional Dependencies (Recommended for Full Functionality)
+# These enhance functionality but aren't strictly required
+numpy>=1.21.0        # For DSP calculations and FIR filter design
+matplotlib>=3.4.0    # For frequency response visualization
+simpleaudio>=1.0.0    # For audio preview/playback
+tkinterdnd2>=0.3.0    # For drag-and-drop functionality
+
+# Development/Build Dependencies
+# Required for creating executables and installers
+pyinstaller>=5.0.0    # For creating standalone executables
+cx_Freeze>=6.10.0     # Alternative executable creation tool
+
+# Installation Instructions:
+# 1. Install FFmpeg separately (system-wide installation):
+#    - Windows: choco install ffmpeg OR download from https://ffmpeg.org/download.html
+#    - macOS: brew install ffmpeg
+#    - Linux: sudo apt install ffmpeg (Ubuntu/Debian)
+#
+# 2. Install Python dependencies:
+#    pip install -r requirements.txt
+#
+# 3. For minimal installation (core functionality only):
+#    pip install ffmpeg-python
+#
+# 4. For full functionality:
+#    pip install numpy matplotlib simpleaudio tkinterdnd2
+#
+# 5. For executable creation:
+#    pip install pyinstaller cx_Freeze

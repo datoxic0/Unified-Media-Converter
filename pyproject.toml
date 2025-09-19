@@ -1,0 +1,185 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unified-media-converter"
+description = "Professional audio and video converter with advanced parametric EQ capabilities"
+readme = "README.md"
+authors = [{name = "Siyabonga Blessing Phakathi", email = "datoxic0@gmail.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+    "Topic :: Multimedia :: Video :: Conversion",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+keywords = ["media", "converter", "audio", "video", "ffmpeg", "eq", "equalizer", "dsp"]
+dependencies = [
+    "ffmpeg-python>=0.2.0",
+    "numpy>=1.21.0",
+    "matplotlib>=3.4.0",
+    "simpleaudio>=1.0.0",
+    "tkinterdnd2>=0.3.0",
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "isort>=5.8",
+    "mypy>=0.812",
+    "pre-commit>=2.13",
+    "pyupgrade>=2.19",
+    "bandit>=1.7",
+    "pydocstyle>=6.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/unified-media-converter/unified-media-converter"
+Documentation = "https://github.com/unified-media-converter/unified-media-converter/blob/main/README.md"
+Repository = "https://github.com/unified-media-converter/unified-media-converter.git"
+"Bug Tracker" = "https://github.com/unified-media-converter/unified-media-converter/issues"
+
+[project.scripts]
+unified-media-converter = "unified_media_converter.__main__:main"
+
+[tool.setuptools_scm]
+write_to = "src/_version.py"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | venv
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["unified_media_converter"]
+known_third_party = ["dataclasses", "json", "math", "matplotlib", "numpy", "os", "pathlib", "queue", "shlex", "shutil", "simpleaudio", "subprocess", "sys", "tempfile", "threading", "time", "tkinter", "traceback", "typing", "wave"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--verbose",
+    "--tb=short",
+    "--strict-markers",
+    "--strict-config",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_optional = true
+implicit_reexport = false
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "ffmpeg.*",
+    "matplotlib.*",
+    "numpy.*",
+    "simpleaudio.*",
+    "tkinter.*",
+    "tkinterdnd2.*",
+]
+ignore_missing_imports = true
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = [
+    "E203",  # Whitespace before ':'
+    "W503",  # Line break occurred before a binary operator
+]
+per-file-ignores = [
+    "__init__.py:F401",  # imported but unused in __init__.py
+]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    ".eggs",
+    "*.egg",
+    "venv",
+    ".venv",
+    ".tox",
+    ".mypy_cache",
+    ".pytest_cache",
+]
+
+[tool.bandit]
+exclude_dirs = [
+    "tests",
+    "venv",
+    ".venv",
+    "build",
+    "dist",
+]
