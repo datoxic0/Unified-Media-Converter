@@ -77,13 +77,13 @@ sudo apt install ffmpeg
 ```
 
 ### 3. Download Application
-Save the `unified_media_converter_v_7.py` file to your preferred location.
+Save the `unified_media_converter.py` file to your preferred location.
 
 ## Usage
 
 ### Starting the Application
 ```bash
-python unified_media_converter_v_7.py
+python unified_media_converter.py
 ```
 
 ### Basic Workflow
@@ -200,13 +200,13 @@ To compile the application into a standalone executable:
 ### Using PyInstaller
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --windowed --icon=app_icon.ico unified_media_converter_v_7.py
+pyinstaller --onefile --windowed --icon=app_icon.ico unified_media_converter.py
 ```
 
 ### Using cx_Freeze
 ```bash
 pip install cx_Freeze
-cxfreeze unified_media_converter_v_7.py --target-dir dist
+cxfreeze unified_media_converter.py --target-dir dist
 ```
 
 ## Logo and Icon Design
@@ -303,3 +303,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 *For support, feature requests, or bug reports, please open an issue on the project repository.*
+
