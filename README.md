@@ -241,7 +241,7 @@ For creating a Windows installer, use the following Inno Setup script template:
 ```ini
 [Setup]
 AppName=Unified Media Converter
-AppVersion=7.0
+AppVersion=1.0
 DefaultDirName={pf}\UnifiedMediaConverter
 DefaultGroupName=Unified Media Converter
 Compression=lzma
@@ -251,16 +251,16 @@ OutputBaseFilename=unified_media_converter_setup
 SetupIconFile=app_icon.ico
 
 [Files]
-Source: "dist\unified_media_converter_v_7.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dist\unified_media_converter.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{group}\Unified Media Converter"; Filename: "{app}\unified_media_converter_v_7.exe"; IconFilename: "{app}\unified_media_converter_v_7.exe"
+Name: "{group}\Unified Media Converter"; Filename: "{app}\unified_media_converter.exe"; IconFilename: "{app}\unified_media_converter.exe"
 Name: "{group}\Uninstall Unified Media Converter"; Filename: "{uninstallexe}"
-Name: "{autodesktop}\Unified Media Converter"; Filename: "{app}\unified_media_converter_v_7.exe"; IconFilename: "{app}\unified_media_converter_v_7.exe"
+Name: "{autodesktop}\Unified Media Converter"; Filename: "{app}\unified_media_converter.exe"; IconFilename: "{app}\unified_media_converter.exe"
 
 [Run]
-Filename: "{app}\unified_media_converter_v_7.exe"; Description: "{cm:LaunchProgram,Unified Media Converter}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\unified_media_converter.exe"; Description: "{cm:LaunchProgram,Unified Media Converter}"; Flags: nowait postinstall skipifsilent
 ```
 
 ## Contributing
@@ -303,5 +303,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 *For support, feature requests, or bug reports, please open an issue on the project repository.*
+
 
 
