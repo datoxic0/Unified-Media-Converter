@@ -287,7 +287,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Changelog
 
-### Version 7.0
+### Version 1.0
 - Added comprehensive video-to-video conversion capabilities
 - Enhanced audio-to-audio conversion with more format support
 - Improved parametric EQ editor with visualization
@@ -297,10 +297,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Improved UI with drag-and-drop support
 - Added preset management system
 
-### Version 6.0
+### Version 0.1
 - Initial release with basic audio conversion and EQ capabilities
 
 ---
 
 *For support, feature requests, or bug reports, please open an issue on the project repository.*
+
 
